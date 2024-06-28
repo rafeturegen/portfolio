@@ -1,15 +1,23 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
+import { useSectionInView } from '@/lib/hooks';
 
 export default function Intro() {
+
+    const { ref } = useSectionInView("Home", 0.5);
+
   return (
-    <section className='max-w-[50rem] mb-28 text-center sm:mb-0'>
+    <section 
+    className='max-w-[50rem] mb-28 text-center sm:mb-0 scroll-mt-28' 
+    id='home'
+    ref={ref}
+    >
         <div className='flex justify-center items-center relative'>
             <div className='relative'>
                 <motion.div 

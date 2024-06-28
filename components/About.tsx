@@ -1,18 +1,24 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import SectionHeading from './SectionHeading';
 import { motion } from 'framer-motion';
+import { useSectionInView } from '@/lib/hooks';
 
 export default function About() {
+
+  const { ref } = useSectionInView("About", 0.5);
+
   return (
     <motion.section 
-    className='flex flex-col gap-2 justify-center items-center max-w-[50rem] sm:mb-40'
+    className='flex flex-col gap-2 justify-center items-center max-w-[50rem] sm:mb-40 scroll-mt-28'
     initial={{ opacity:0, y:100 }}
     animate={{ opacity:1, y:0 }}
     transition={{
         delay:0.175,
     }}
+    ref={ref}
+    id='about'
     >
         <SectionHeading>About Me</SectionHeading>
         <p 
