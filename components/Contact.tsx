@@ -3,16 +3,31 @@
 import React from 'react'
 import SectionHeading from './SectionHeading'
 import { useSectionInView } from '@/lib/hooks'
-import { FaPaperPlane } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { sendEmail } from '@/actions/sendEmail';
+import SubmitButton from './SubmitButton';
+import toast from 'react-hot-toast';
 
 export default function Contact() {
-
     const { ref } = useSectionInView("Contact", 0.5);
+
     return (
-        <section 
+        <motion.section 
         id='contact'
         ref={ref}
         className='mb-20 sm:mb-28 w-[min(100%,38rem)] text-center'
+        initial={{ 
+            opacity:0 
+        }}
+        animate={{ 
+            opacity:1 
+        }}
+        transition={{
+            duration:1
+        }}
+        viewport={{
+            once:true,
+        }}
         >
             <SectionHeading>Contact Me</SectionHeading>
             <p className='text-gray-700 -mt-6'>Please contact me directly at {" "}
@@ -24,17 +39,38 @@ export default function Contact() {
                 </a>
                 {" "}or through this form.
             </p>
-            <form className='mt-10 flex flex-col'>
-                <input type="email" placeholder='Your Email' className='h-14 px-4 rounded-lg transition-all border border-black/10'/>
-                <textarea name="" id="" placeholder='Your message' className='h-52 my-3 rounded-lg border border-black/10 transition-all p-4'></textarea>
-                <button 
-                type='submit'
-                className='group flex items-center gap-3 bg-gray-950 rounded-full w-[8rem] text-white py-3 px-4 justify-center'
-                >
-                    Submit
-                    <FaPaperPlane className='group-hover:-translate-y-1 transition'/>
-                </button>
+            <form 
+            className='mt-10 flex flex-col'
+            action={async (FormData) => {
+
+                console.log(Object.fromEntries(FormData.entries()));
+                const { data, error } = await sendEmail(FormData);
+
+                if(error) {
+                    toast.error(error);
+                    return;
+                }
+
+                toast.success("Message sent successfully!");
+            }}
+            >
+                <input 
+                type="email" 
+                placeholder='Your Email' 
+                className='h-14 px-4 rounded-lg transition-all border border-black/10' 
+                required 
+                maxLength={500}
+                name='senderEmail'
+                />
+                <textarea 
+                name="message" 
+                placeholder='Your message' 
+                className='h-52 my-3 rounded-lg border border-black/10 transition-all p-4' 
+                required  
+                maxLength={500}
+                />
+                <SubmitButton/>
             </form>
-        </section>
+        </motion.section>
     )
 }
