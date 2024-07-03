@@ -1,10 +1,9 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import successLadderImg from "@/public/successLadder.png";
+import reactFoodImg from "@/public/reacFfood.png";
+import placePickerImg from "@/public/placePicker.png";
 
 export const links = [
   {
@@ -38,15 +37,15 @@ export const experiencesData = [
     title: "Graduated bootcamp",
     location: "Online",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "I graduated after 3 months of studying. Then I found an internship as a front-end developer.",
     icon: React.createElement(LuGraduationCap),
     date: "2023",
   },
   {
-    title: "Front-End Developer",
-    location: "Antalya, Turkey",
+    title: "Front-End Developer Internship",
+    location: "Ankara, Turkey",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I worked as a front-end developer intern for 1 month. I also upskilled to the full stack.",
     icon: React.createElement(CgWorkAlt),
     date: "2024",
   },
@@ -54,25 +53,25 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "SuccessLadder",
     description:
       "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+    tags: ["React", "Next.js", "MongoDB", "Tailwind"],
+    imageUrl: successLadderImg,
   },
   {
     title: "rmtDev",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Food app with form submission.",
+    tags: ["React", "Tailwind"],
+    imageUrl: reactFoodImg,
   },
   {
     title: "Word Analytics",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "A basic travel list.",
+    tags: ["React", "Tailwind",],
+    imageUrl: placePickerImg,
   },
 ] as const;
 

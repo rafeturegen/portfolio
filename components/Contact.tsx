@@ -30,7 +30,7 @@ export default function Contact() {
         }}
         >
             <SectionHeading>Contact Me</SectionHeading>
-            <p className='text-gray-700 -mt-6'>Please contact me directly at {" "}
+            <p className='text-gray-700 -mt-6 dark:text-gray-200/90'>Please contact me directly at {" "}
                 <a 
                 className='underline' 
                 href='mailto:rafet.uregen7@gmail.com'
@@ -57,7 +57,7 @@ export default function Contact() {
                 <input 
                 type="email" 
                 placeholder='Your Email' 
-                className='h-14 px-4 rounded-lg transition-all border border-black/10' 
+                className='h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none dark:text-gray-950' 
                 required 
                 maxLength={500}
                 name='senderEmail'
@@ -65,7 +65,7 @@ export default function Contact() {
                 <textarea 
                 name="message" 
                 placeholder='Your message' 
-                className='h-52 my-3 rounded-lg border border-black/10 transition-all p-4' 
+                className='h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none dark:text-gray-950' 
                 required  
                 maxLength={500}
                 />

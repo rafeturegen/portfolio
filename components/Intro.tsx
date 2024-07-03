@@ -86,23 +86,23 @@ export default function Intro() {
                 <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition'/>
             </Link>
             <a 
-            href="/cv.pdf" 
+            href="/resume.pdf" 
             download 
-            className='flex items-center gap-2 py-2 px-4 bg-slate-50 rounded-3xl group hover:scale-110 active:scale-105 border border-black/10'
+            className='flex items-center gap-2 py-2 px-4 bg-slate-50 rounded-3xl group hover:scale-110 active:scale-105 border border-black/10 dark:text-gray-950 '
             >
                 Download CV {""}
                 <HiDownload className='group-hover:translate-y-1 transition'/>
             </a>
             <a 
             target='_blank'
-            className="hover:scale-[1.15] active:scale-110 bg-slate-50 rounded-full w-10 h-10 flex justify-center items-center border border-black/10 hover:text-gray-950" 
+            className="hover:scale-[1.15] active:scale-110 bg-slate-50 rounded-full w-10 h-10 flex justify-center items-center border border-black/10 hover:text-gray-950 dark:text-gray-950" 
             href='https://www.linkedin.com/in/rafet-uregen-053525253/'
             >
                 <BsLinkedin className=''/>
             </a>
             <a 
             target='_blank'
-            className="hover:scale-[1.15] active:scale-110 bg-slate-50 rounded-full w-10 h-10 flex justify-center items-center border border-black/10 hover:text-gray-950" 
+            className="hover:scale-[1.15] active:scale-110 bg-slate-50 rounded-full w-10 h-10 flex justify-center items-center border border-black/10 hover:text-gray-950 dark:text-gray-950" 
             href='https://www.linkedin.com/in/rafet-uregen-053525253/?locale=en_US'
             >
                 <BsGithub className=''/>
