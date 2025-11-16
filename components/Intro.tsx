@@ -85,18 +85,18 @@ export default function Intro() {
                 Contact me here{" "}
                 <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition'/>
             </Link>
-            <a 
-            href="/resume.pdf" 
-            download 
-            className='flex items-center gap-2 py-2 px-4 bg-slate-50 rounded-3xl group hover:scale-110 active:scale-105 border border-black/10 dark:text-gray-950 '
-            >
-                Download CV {""}
+            <button
+                type="button"
+                onClick={() => alert("My CV is not available right now. Please check back later!")}
+                className='flex items-center gap-2 py-2 px-4 bg-slate-50 rounded-3xl group hover:scale-110 active:scale-105 border border-black/10 dark:text-gray-950 '
+                >
+                Download CV
                 <HiDownload className='group-hover:translate-y-1 transition'/>
-            </a>
+            </button>
             <a 
             target='_blank'
             className="hover:scale-[1.15] active:scale-110 bg-slate-50 rounded-full w-10 h-10 flex justify-center items-center border border-black/10 hover:text-gray-950 dark:text-gray-950" 
-            href='https://www.linkedin.com/in/rafet-uregen-053525253/'
+            href='www.linkedin.com/in/rafet-uregen-65902a391'
             >
                 <BsLinkedin className=''/>
             </a>

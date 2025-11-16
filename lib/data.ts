@@ -55,21 +55,21 @@ export const projectsData = [
   {
     title: "SuccessLadder",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+      "I worked as a full-stack developer on this project. This project helps students navigate their studies without getting overwhelmed by the large amount of information on the internet.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind"],
     imageUrl: successLadderImg,
   },
   {
     title: "rmtDev",
     description:
-      "Food app with form submission.",
+      "Coming soon...",
     tags: ["React", "Tailwind"],
     imageUrl: reactFoodImg,
   },
   {
     title: "Word Analytics",
     description:
-      "A basic travel list.",
+      "Coming soon...",
     tags: ["React", "Tailwind",],
     imageUrl: placePickerImg,
   },
